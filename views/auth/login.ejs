@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+   
+  <div class=".container">
+    <h2>Login</h2>
+  <form action="/api/auth/login" method="POST">
+    <input type="email" name="email" placeholder="Email" required /><br>
+    <input type="password" name="password" placeholder="Password" required /><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <h4>don't have a account, Register Now <a href="/auth/register">Create your account</a></h4>
+  </div>
+</body>
+</html>

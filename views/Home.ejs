@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("partials/header") %>
+    
+
+    <section class="hero">
+    <div class="hero-text">
+      <h1>Experience <br> the wilderness</h1>
+      <p>Join group tours or customize your dream safari</p>
+      <div class="buttons">
+        <a href="/tours" class="btn green">View all tours</a>
+        <a href="/custom-tour" class="btn white">Customize your tour</a>
+      </div>
+    </div>
+
+    <div class="video-wrapper">
+      <video autoplay muted loop playsinline class="background-video">
+        <source src="/videos/herovideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <!-- Text overlay is a transparent PNG image -->
+      <!-- <img src="/images/tiger-text-overlay.png" alt="Overlay" class="overlay-image" /> -->
+    </div>
+  </section>
+
+
+  <section class="partners-section">
+    <h2>Our Partners</h2>
+  <div class="logo-slider">
+    <div class="logo-track">
+      <!-- Repeat logos to ensure smooth loop -->
+      <img src="/images/logos/logo png02.png" alt="Partner 1" />
+      <img src="/images/logos/logo png03.png" alt="Partner 2" />
+      <img src="/images/logos/logo png04.png" alt="Partner 3" />
+      <img src="/images/logos/logo png05.png" alt="Partner 4" />
+
+      <!-- Duplicate for seamless scroll -->
+      <img src="/images/logos/logo png02.png" alt="Partner 1" />
+      <img src="/images/logos/logo png03.png" alt="Partner 2" />
+      <img src="/images/logos/logo png04.png" alt="Partner 3" />
+      <img src="/images/logos/logo png05.png" alt="Partner 4" />
+
+    </div>
+  </div>
+    </section>
+
+
+    <section class="featured-section">
+  <h2>Featured Tours for You</h2>
+  <div class="tour-card-container">
+
+    <!-- Card 1 -->
+    <div class="tour-card">
+      <div class="image-wrapper">
+        <img src="/images/cardsimg/img1.png" alt="Pench National Park">
+        <span class="badge">filling soon</span>
+      </div>
+      <div class="tour-info">
+        <h3>Pench National Park</h3>
+        <p>Date : 15 May, 2025</p>
+
+        <div class="price-box">
+          <div>
+            <small>50% OFF</small>
+            <p class="offer">Limited Time Offer</p>
+          </div>
+          <div>
+            <p class="price">₹17900</p>
+            <p class="strike">₹25600</p>
+            <small>per person</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="#" class="view-btn">View Now</a>
+          <button class="heart">♥</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 (highlighted background) -->
+    <div class="tour-card highlight">
+      <div class="image-wrapper">
+        <img src="/images/cardsimg/img2.png" alt="Kanha National Park">
+        <span class="badge">only 6 seats left</span>
+      </div>
+      <div class="tour-info">
+        <h3>Kanha National Park</h3>
+        <p>Date : 15 May, 2025</p>
+
+        <div class="price-box">
+          <div>
+            <small>50% OFF</small>
+            <p class="offer">Limited Time Offer</p>
+          </div>
+          <div>
+            <p class="price">₹18900</p>
+            <p class="strike">₹27500</p>
+            <small>per person</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="#" class="view-btn">View Now</a>
+          <button class="heart saved">♥</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="tour-card">
+      <div class="image-wrapper">
+        <img src="/images/cardsimg/img3.png" alt="Tadoba National Park">
+        <span class="badge">Limited Seats</span>
+      </div>
+      <div class="tour-info">
+        <h3>Tadoba National Park</h3>
+        <p>Date : 15 May, 2025</p>
+
+        <div class="price-box">
+          <div>
+            <small>50% OFF</small>
+            <p class="offer">Limited Time Offer</p>
+          </div>
+          <div>
+            <p class="price">₹17900</p>
+            <p class="strike">₹25600</p>
+            <small>per person</small>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="#" class="view-btn">View Now</a>
+          <button class="heart saved">♥</button>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+  <div class="viewbtn">
+    <div class="view-all">
+    <a href="#" class="view-all-btn">View All Tours</a>
+  </div>
+  </div>
+    </section>
+
+
+    <section class="ecotriip-difference">
+  <h2 class="difference-title">What sets ecotriip apart</h2>
+
+  <div class="difference-stats">
+    <div>
+      <h3>10+</h3>
+      <p>Years of experience</p>
+    </div>
+    <div>
+      <h3>99%</h3>
+      <p>Success Rate</p>
+    </div>
+    <div>
+      <h3>100%</h3>
+      <p>Safe & Well Being</p>
+    </div>
+  </div>
+
+  <div class="difference-icons">
+    <div>
+      <img src="/icons/itinerary.svg" alt="Itineraries">
+      <p>Personalised &<br>unique Itineraries</p>
+    </div>
+    <div>
+      <img src="/icons/safety.svg" alt="Safety">
+      <p>Safety &<br>well being</p>
+    </div>
+    <div>
+      <img src="/icons/responsible.svg" alt="Tourism">
+      <p>Responsible<br>Tourism</p>
+    </div>
+    <div>
+      <img src="/icons/insurance.svg" alt="Insurance">
+      <p>Travel insurance<br>& Protection</p>
+    </div>
+    <div>
+      <img src="/icons/support.svg" alt="Support">
+      <p>Complete Customer<br>Support</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- <%- include("partials/footer") %> -->
+
+</body>
+</html>
