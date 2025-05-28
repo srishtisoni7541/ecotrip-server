@@ -119,6 +119,7 @@ const getTour = asyncHandler(async (req, res) => {
 // @route   POST /api/tours
 // @access  Private/Admin
 const createTour = asyncHandler(async (req, res) => {
+  console.log(req.body);
   const tour = await Tour.create(req.body);
   
   res.status(201).json({

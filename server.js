@@ -30,17 +30,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 
 // Middleware
-app.use(cors());
+// ✅ CORS Configuration
+const corsOptions = {
+  origin: ['http://localhost:5173','https://ecotrip-client.vercel.app','http://localhost:5174'], 
+  credentials: true, 
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 
 // Logging middleware in development
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'));
-}
+// if (process.env.NODE_ENV === 'development') {
+//   app.use(morgan('dev'));
+// }
 
+app.use(morgan('tiny'));
 // Mount routes
-app.use('/api/tours', tourRoutes);
+app.use('/api/trips', tourRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/bookings', bookingRoutes);

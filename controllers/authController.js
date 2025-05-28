@@ -5,7 +5,7 @@ const User = require('../models/userModel');
 // @route   POST /api/auth/register
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password,role } = req.body;
 
   // Check if user exists
   const userExists = await User.findOne({ email });
@@ -19,7 +19,8 @@ const registerUser = asyncHandler(async (req, res) => {
   const user = await User.create({
     name,
     email,
-    password
+    password,
+    role
   });
 
   if (user) {

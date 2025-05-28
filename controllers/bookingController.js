@@ -53,9 +53,10 @@ const getBooking = asyncHandler(async (req, res) => {
 const createBooking = asyncHandler(async (req, res) => {
   // Add user to req.body
   req.body.user = req.user.id;
+  console.log(req.body);
   
   // Check if tour exists
-  const tour = await Tour.findById(req.body.tour);
+  const tour = await Tour.findById(req.body.tourId);
   
   if (!tour) {
     res.status(404);
