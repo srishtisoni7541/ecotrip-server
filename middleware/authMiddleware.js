@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 const asyncHandler = require('express-async-handler');
 const User = require('../models/userModel');
 
-// Protect routes
 const protect = asyncHandler(async (req, res, next) => {
   let token;
 
@@ -13,7 +12,7 @@ const protect = asyncHandler(async (req, res, next) => {
     try {
       // Get token from header
       token = req.headers.authorization.split(' ')[1];
-      console.log(token);
+      console.log("Token from header:", token);
 
       // Verify token
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
@@ -21,18 +20,17 @@ const protect = asyncHandler(async (req, res, next) => {
       // Get user from the token
       req.user = await User.findById(decoded.id).select('-password');
 
-      next();
+      return next(); // ⬅️ Stop execution here if success
     } catch (error) {
-      console.error(error);
+      console.error("Token verification failed:", error.message);
       res.status(401);
       throw new Error('Not authorized, token failed');
     }
   }
 
-  if (!token) {
-    res.status(401);
-    throw new Error('Not authorized, no token');
-  }
+  // ⬇️ This will only run if header was missing or malformed
+  res.status(401);
+  throw new Error('Not authorized, no token');
 });
 
 // Admin middleware
