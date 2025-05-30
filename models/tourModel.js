@@ -35,24 +35,24 @@
       },
       duration: {
         type: Number,
-        required: [true, 'Tour duration is required']
+        // required: [true, 'Tour duration is required']
       },
       startDate: {
         type: Date,
-        required: [true, 'Start date is required']
+        // required: [true, 'Start date is required']
       },
       endDate: {
         type: Date,
-        required: [true, 'End date is required']
+        // required: [true, 'End date is required']
       },
       maxGroupSize: {
         type: Number,
-        required: [true, 'Group size is required']
+        // required: [true, 'Group size is required']
       },
       destination: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Destination',
-        required: [true, 'Destination is required']
+        // required: [true, 'Destination is required']
       },
       difficulty: {
         type: String,
@@ -74,15 +74,15 @@
         {
           day: {
             type: Number,
-            required: true
+            // required: true
           },
           title: {
             type: String,
-            required: true
+            // required: true
           },
           description: {
             type: String,
-            required: true
+            // required: true
           },
           accommodationType: String,
           meals: [String]

@@ -32,7 +32,7 @@ app.use(express.static('public'));
 // Middleware
 // ✅ CORS Configuration
 const corsOptions = {
-  origin: ['http://localhost:5173','https://ecotrip-client.vercel.app','http://localhost:5174','https://ecotrip-admin.vercel.app'], 
+  origin: ['http://localhost:5173','https://ecotrip-rho.vercel.app','http://localhost:5174','https://ecotrip-admin.vercel.app'], 
   credentials: true, 
 };
 app.use(cors(corsOptions));
